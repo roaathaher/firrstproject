@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+    .box{
+        color: #fff;
+        padding: 20px;
+        display: none;
+        margin-top: 20px;
+    }
+    .jor{ background: black; }
+    .syr{ background: black; }
+    .usa{ background: black; }
+</style>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("select").change(function(){
+        $(this).find("option:selected").each(function(){
+            var optionValue = $(this).attr("value");
+            if(optionValue){
+                $(".box").not("." + optionValue).hide();
+                $("." + optionValue).show();
+            } else{
+                $(".box").hide();
+            }
+        });
+    }).change();
+});
+</script>
+</head>
+<body>
+    <div>
+        <select>
+            <option></option>
+            <option value="jor">Jordan</option>
+            <option value="syr">Syria</option>
+            <option value="usa">USA</option>
+        </select>
+    </div>
+    <div class="jor box">
+        <label>City</label>
+        <input type="text" name="city">
+    </div>
+    <div class="syr box"> <label>City</label>
+        <input type="text" name="city"></div>
+    <div class="usa box">
+        <label>State</label>
+        <input type="text" name="state">
+    </div>
+    <div class="usa box">
+        <label>Pstal Code</label>
+        <input type="text" name="postal">
+    </div>
+</body>
+</html>

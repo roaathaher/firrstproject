@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		function plusfunction(){
+	
+  var x  = document.getElementById("num1").value+document.getElementById("num2").value;
+ //document.getElementById("res").innerHTML = x;
+ alert(x);
+		}
+		 function minusfunction(){
+		 
+  var x = document.getElementById("num1").value -document.getElementById("num2").value;
+// document.getElementById("res").innerHTML = x. value;
+ alert(x);
+		 }
+		 function multifunction(){
+		 		
+  var x = document.getElementById("num1").value * document.getElementById("num2").value;
+  //document.getElementById("res").innerHTML = x.value;
+ alert(x);
+		 }
+	</script>
+</head>
+<body>
+	<form action="#" method="POST">
+		<div>
+		<label>number1</label>
+		<input type="number" name="n1" id="num1"/>
+	</div>
+	<br><br>
+	<div>
+		<label>number2</label>
+		<input type="number" name="n2" id="num2"/>
+	</div>
+		<br><br>
+	<div>
+		<button onclick="plusfunction()">+</button>
+			<button onclick="minusfunction()">-</button>
+				<button onclick="multifunction()">*</button>
+
+	</div>
+		<br><br>
+	<div>
+		<label>Result:</label>
+		<input type="number" name="result"  id="res" readonly>
+	</div>
+	</form>
+</body>
+</html>
